@@ -16,20 +16,23 @@ class ViewController: UIViewController {
     
     var winningCombinations = [[0,3,6],[1,4,7],[2,5,8],[0,1,2],[3,4,5],[6,7,8],[0,4,8],[2,4,6]]
     
+    var gameActive = true
+    
+    @IBOutlet var restartGameButton: UIButton!
     
     @IBOutlet var gamePiece: UIButton!
     
     
     @IBAction func placePiece(sender: AnyObject) {
         
-        if currentPlayer == 1 && gameState[sender.tag] == 0 {
+        if currentPlayer == 1 && gameState[sender.tag] == 0 && gameActive {
         
             sender.setImage(UIImage(named:"cross.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
             currentPlayer = 2
             gameOverCheck()
             
-        } else if currentPlayer == 2 && gameState[sender.tag] == 0 {
+        } else if currentPlayer == 2 && gameState[sender.tag] == 0 && gameActive {
             
             sender.setImage(UIImage(named:"nought.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
@@ -44,15 +47,40 @@ class ViewController: UIViewController {
         
         for combinations in winningCombinations {
             if gameState[combinations[0]] == gameState[combinations[1]] && gameState[combinations[1]] == gameState[combinations[2]] && gameState[combinations[0]] != 0 {
-//                print("we have a winner")
+                
+                restartGameButton.hidden = false
+                
+                gameActive = false
+                
+                if currentPlayer-1 == 1 {
+                    
+                    print("crosses win")
+                } else {
+                    print("noughts win")
+                }
+                
                 
             }
         }
+    }
+    
+    @IBAction func restartGame(sender:AnyObject){
+        
+        print("game restarted")
+        
+        gameState = [0,0,0,0,0,0,0,0,0]
+        
+        currentPlayer = 1
+        
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        restartGameButton.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {

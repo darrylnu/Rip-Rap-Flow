@@ -24,6 +24,12 @@
                                     <constraint firstAttribute="height" constant="408" id="lTa-Sc-2rV"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pK9-Zf-6c9">
+                                <rect key="frame" x="144" y="118" width="95" height="118"/>
+                                <connections>
+                                    <action selector="placePiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWz-KY-eaV"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lun-wN-grn">
                                 <rect key="frame" x="272" y="261" width="83" height="115"/>
                                 <connections>
@@ -72,10 +78,12 @@
                                     <action selector="placePiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ZW-ya-vCC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pK9-Zf-6c9">
-                                <rect key="frame" x="144" y="118" width="95" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-m6-zUj">
+                                <rect key="frame" x="142" y="558" width="90" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Play Again"/>
                                 <connections>
-                                    <action selector="placePiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWz-KY-eaV"/>
+                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQ1-oj-RWP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,7 +95,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="gamePiece" destination="MfT-hK-9Q3" id="3mB-SR-wIB"/>
+                        <outlet property="gamePiece" destination="IaC-kN-Ayn" id="8Ax-ve-JFS"/>
+                        <outlet property="restartGameButton" destination="vnr-m6-zUj" id="nN4-Xk-tdb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
