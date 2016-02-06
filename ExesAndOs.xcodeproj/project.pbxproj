@@ -15,6 +15,9 @@
 		17EE48AC1C643C27006BC166 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48A91C643C27006BC166 /* board.png */; };
 		17EE48AD1C643C27006BC166 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48AA1C643C27006BC166 /* cross.png */; };
 		17EE48AE1C643C27006BC166 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48AB1C643C27006BC166 /* nought.png */; };
+		17EE48B01C657554006BC166 /* play-again-button-md.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48AF1C657554006BC166 /* play-again-button-md.png */; };
+		17EE48B21C657738006BC166 /* drake.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B11C657738006BC166 /* drake.png */; };
+		17EE48B41C657741006BC166 /* meek.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B31C657741006BC166 /* meek.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		17EE48A91C643C27006BC166 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		17EE48AA1C643C27006BC166 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		17EE48AB1C643C27006BC166 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+		17EE48AF1C657554006BC166 /* play-again-button-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-again-button-md.png"; sourceTree = "<group>"; };
+		17EE48B11C657738006BC166 /* drake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drake.png; sourceTree = "<group>"; };
+		17EE48B31C657741006BC166 /* meek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meek.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,11 @@
 				17EE48991C643BE8006BC166 /* ViewController.swift */,
 				17EE489B1C643BE8006BC166 /* Main.storyboard */,
 				17EE48A91C643C27006BC166 /* board.png */,
+				17EE48B31C657741006BC166 /* meek.png */,
 				17EE48AA1C643C27006BC166 /* cross.png */,
 				17EE48AB1C643C27006BC166 /* nought.png */,
+				17EE48B11C657738006BC166 /* drake.png */,
+				17EE48AF1C657554006BC166 /* play-again-button-md.png */,
 				17EE489E1C643BE8006BC166 /* Assets.xcassets */,
 				17EE48A01C643BE8006BC166 /* LaunchScreen.storyboard */,
 				17EE48A31C643BE8006BC166 /* Info.plist */,
@@ -133,6 +142,9 @@
 			files = (
 				17EE48AD1C643C27006BC166 /* cross.png in Resources */,
 				17EE48AC1C643C27006BC166 /* board.png in Resources */,
+				17EE48B41C657741006BC166 /* meek.png in Resources */,
+				17EE48B01C657554006BC166 /* play-again-button-md.png in Resources */,
+				17EE48B21C657738006BC166 /* drake.png in Resources */,
 				17EE48AE1C643C27006BC166 /* nought.png in Resources */,
 				17EE48A21C643BE8006BC166 /* LaunchScreen.storyboard in Resources */,
 				17EE489F1C643BE8006BC166 /* Assets.xcassets in Resources */,

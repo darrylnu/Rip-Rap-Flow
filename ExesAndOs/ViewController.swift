@@ -19,6 +19,15 @@ class ViewController: UIViewController {
     var gameActive = true
     
     
+    @IBOutlet var playerOneScore: UILabel!
+    
+    
+    @IBOutlet var playerTwoScore: UILabel!
+    
+    var player1Score = 0
+    
+    var player2Score = 0
+    
     @IBOutlet var restartGameButton: UIButton!
     
     @IBOutlet var gamePiece: UIButton!
@@ -28,14 +37,14 @@ class ViewController: UIViewController {
         
         if currentPlayer == 1 && gameState[sender.tag] == 0 && gameActive {
         
-            sender.setImage(UIImage(named:"cross.png"), forState: .Normal)
+            sender.setImage(UIImage(named:"drake.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
             currentPlayer = 2
             gameOverCheck()
             
         } else if currentPlayer == 2 && gameState[sender.tag] == 0 && gameActive {
             
-            sender.setImage(UIImage(named:"nought.png"), forState: .Normal)
+            sender.setImage(UIImage(named:"meek.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
             currentPlayer = 1
             gameOverCheck()
@@ -54,9 +63,13 @@ class ViewController: UIViewController {
                 gameActive = false
                 
                 if currentPlayer-1 == 1 {
+                    player1Score++
+                    playerOneScore.text = String(player1Score)
                     
                     print("crosses win")
                 } else {
+                    player2Score++
+                    playerTwoScore.text = String(player2Score)
                     print("noughts win")
                 }
                 
@@ -81,6 +94,8 @@ class ViewController: UIViewController {
         gameState = [0,0,0,0,0,0,0,0,0]
         
         currentPlayer = 1
+        
+        restartGameButton.hidden = true
         
         
         
