@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,16 @@ class ViewController: UIViewController {
     
     var numberOfMovesMade = 0
     
+    var player1Score = 0
+    
+    var player2Score = 0
+    
+    var drakeSound :AVAudioPlayer?
+    var dontPlay : AVAudioPlayer?
+    var khaledSound : AVAudioPlayer?
+    var notAgain : AVAudioPlayer?
+    
+    
     @IBOutlet var winnerLabel: UILabel!
     
     @IBOutlet var playerOneScore: UILabel!
@@ -27,11 +38,7 @@ class ViewController: UIViewController {
     @IBOutlet var winnerPic: UIImageView!
     
     @IBOutlet var playerTwoScore: UILabel!
-    
-    var player1Score = 0
-    
-    var player2Score = 0
-    
+   
     @IBOutlet var restartGameButton: UIButton!
     
     @IBOutlet var gamePiece: UIButton!
@@ -47,6 +54,7 @@ class ViewController: UIViewController {
             gameState[sender.tag] = currentPlayer
             currentPlayer = 2
             numberOfMovesMade++
+            drakeSound!.play()
             gameOverCheck()
             
         } else if currentPlayer == 2 && gameState[sender.tag] == 0 && gameActive {
@@ -75,11 +83,13 @@ class ViewController: UIViewController {
                     playerOneScore.text = String(player1Score)
                     print("player 1 win")
                     playerWin("Player 1")
+                    notAgain!.play()
                 } else {
                     player2Score++
                     playerTwoScore.text = String(player2Score)
                     print("player 2 win")
                     playerWin("Player 2")
+                    dontPlay!.play()
                 }
                 
                 
@@ -90,6 +100,14 @@ class ViewController: UIViewController {
             
             print("game is a tie")
             
+            winnerLabel.text = "Yo, tie game!"
+            winnerLabel.hidden = false
+            winnerPic.hidden = false
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.winnerLabel.center = CGPointMake(self.winnerLabel.center.x - 500, self.winnerLabel.center.y)
+                
+                self.winnerPic.center = CGPointMake(self.winnerPic.center.x, self.winnerPic.center.y-500)
+            })
             restartGameButton.hidden = false
             
             gameActive = false
@@ -102,6 +120,8 @@ class ViewController: UIViewController {
     @IBAction func restartGame(sender:AnyObject){
         
         print("game restarted")
+        
+        khaledSound!.play()
         
         gameActive = true
         
@@ -130,6 +150,8 @@ class ViewController: UIViewController {
         
         
         
+        
+        
     }
     
     func playerWin (sender: String) {
@@ -146,9 +168,42 @@ class ViewController: UIViewController {
 
     }
     
+    func setupAudioPlayerWithFile (file: String, fileType: String) -> AVAudioPlayer? {
+        
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: fileType)
+        let url = NSURL(fileURLWithPath: path!)
+        
+        var audioPlayer : AVAudioPlayer?
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+        } catch {
+            print("there was an error in playing audio")
+        }
+        return audioPlayer
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let drakeSound = self.setupAudioPlayerWithFile("drakeSound", fileType: "mp3") {
+            self.drakeSound = drakeSound
+        }
+        
+        
+        if let khaledSound = self.setupAudioPlayerWithFile("anotherOne", fileType: "wav") {
+            self.khaledSound = khaledSound
+        }
+        if let dontPlay = self.setupAudioPlayerWithFile("dontPlayYaself", fileType: "wav") {
+            self.dontPlay = dontPlay
+        }
+        if let notAgain = self.setupAudioPlayerWithFile("meekSound", fileType: "wav") {
+            self.notAgain = notAgain
+        }
+        
         
         restartGameButton.hidden = true
         

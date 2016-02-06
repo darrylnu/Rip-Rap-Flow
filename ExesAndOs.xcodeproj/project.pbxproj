@@ -19,6 +19,10 @@
 		17EE48B21C657738006BC166 /* drake.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B11C657738006BC166 /* drake.png */; };
 		17EE48B41C657741006BC166 /* meek.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B31C657741006BC166 /* meek.png */; };
 		17EE48B61C658CD3006BC166 /* khaled.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B51C658CD3006BC166 /* khaled.png */; };
+		17EE48B81C659AE5006BC166 /* drakeSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B71C659AE5006BC166 /* drakeSound.mp3 */; };
+		17EE48BC1C65A94F006BC166 /* anotherOne.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48B91C65A94F006BC166 /* anotherOne.wav */; };
+		17EE48BD1C65A94F006BC166 /* dontPlayYaself.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48BA1C65A94F006BC166 /* dontPlayYaself.wav */; };
+		17EE48BE1C65A94F006BC166 /* meekSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48BB1C65A94F006BC166 /* meekSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		17EE48B11C657738006BC166 /* drake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drake.png; sourceTree = "<group>"; };
 		17EE48B31C657741006BC166 /* meek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meek.png; sourceTree = "<group>"; };
 		17EE48B51C658CD3006BC166 /* khaled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = khaled.png; sourceTree = "<group>"; };
+		17EE48B71C659AE5006BC166 /* drakeSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drakeSound.mp3; sourceTree = "<group>"; };
+		17EE48B91C65A94F006BC166 /* anotherOne.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = anotherOne.wav; sourceTree = "<group>"; };
+		17EE48BA1C65A94F006BC166 /* dontPlayYaself.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dontPlayYaself.wav; sourceTree = "<group>"; };
+		17EE48BB1C65A94F006BC166 /* meekSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meekSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,10 @@
 				17EE48B51C658CD3006BC166 /* khaled.png */,
 				17EE48B11C657738006BC166 /* drake.png */,
 				17EE48AF1C657554006BC166 /* play-again-button-md.png */,
+				17EE48B71C659AE5006BC166 /* drakeSound.mp3 */,
+				17EE48B91C65A94F006BC166 /* anotherOne.wav */,
+				17EE48BA1C65A94F006BC166 /* dontPlayYaself.wav */,
+				17EE48BB1C65A94F006BC166 /* meekSound.wav */,
 				17EE489E1C643BE8006BC166 /* Assets.xcassets */,
 				17EE48A01C643BE8006BC166 /* LaunchScreen.storyboard */,
 				17EE48A31C643BE8006BC166 /* Info.plist */,
@@ -144,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17EE48AD1C643C27006BC166 /* cross.png in Resources */,
+				17EE48BC1C65A94F006BC166 /* anotherOne.wav in Resources */,
+				17EE48BE1C65A94F006BC166 /* meekSound.wav in Resources */,
 				17EE48AC1C643C27006BC166 /* board.png in Resources */,
 				17EE48B41C657741006BC166 /* meek.png in Resources */,
 				17EE48B01C657554006BC166 /* play-again-button-md.png in Resources */,
@@ -153,6 +167,8 @@
 				17EE489F1C643BE8006BC166 /* Assets.xcassets in Resources */,
 				17EE48B61C658CD3006BC166 /* khaled.png in Resources */,
 				17EE489D1C643BE8006BC166 /* Main.storyboard in Resources */,
+				17EE48B81C659AE5006BC166 /* drakeSound.mp3 in Resources */,
+				17EE48BD1C65A94F006BC166 /* dontPlayYaself.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
