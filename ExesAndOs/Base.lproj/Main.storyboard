@@ -137,14 +137,22 @@
                                     <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQ1-oj-RWP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gz-5j-da7">
-                                <rect key="frame" x="262" y="46" width="93" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gz-5j-da7">
+                                <rect key="frame" x="266" y="46" width="93" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="1lT-cw-E6n"/>
+                                    <constraint firstAttribute="height" constant="33" id="xnH-kc-G3D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drizzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgM-Gz-Hwk">
-                                <rect key="frame" x="20" y="46" width="93" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drizzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgM-Gz-Hwk">
+                                <rect key="frame" x="16" y="46" width="93" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Iny-Yx-Fl0"/>
+                                    <constraint firstAttribute="width" constant="93" id="NIJ-ba-Em1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -161,11 +169,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGW-l3-frD">
+                                <rect key="frame" x="20" y="272" width="335" height="124"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="TlF-lG-0Vp"/>
+                                    <constraint firstAttribute="height" constant="124" id="j7I-Q4-hVb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khaled.png" translatesAutoresizingMaskIntoConstraints="NO" id="csY-jw-CuY">
+                                <rect key="frame" x="28" y="275" width="132" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="2hg-E5-d3Z"/>
+                                    <constraint firstAttribute="height" constant="118" id="IT0-eJ-sBK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.19458065090750309" blue="0.15063795135934011" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="37" id="04t-gK-aRG"/>
                             <constraint firstItem="IaC-kN-Ayn" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="-105" id="0bX-qO-Jtd"/>
+                            <constraint firstItem="csY-jw-CuY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="100-Kw-HGz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vnr-m6-zUj" secondAttribute="trailing" constant="123" id="3JD-v2-TSb"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="top" secondItem="gUt-9d-T1r" secondAttribute="bottom" constant="-108" id="3ST-G1-HMY"/>
                             <constraint firstItem="pK9-Zf-6c9" firstAttribute="leading" secondItem="SoN-eS-MOj" secondAttribute="trailing" constant="-234" id="46G-RE-PHa"/>
@@ -173,10 +200,12 @@
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ZQ-fZ-dSq"/>
                             <constraint firstItem="MfT-hK-9Q3" firstAttribute="leading" secondItem="SoN-eS-MOj" secondAttribute="trailing" constant="-107" id="7vi-K8-cAd"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="leading" secondItem="IaC-kN-Ayn" secondAttribute="trailing" constant="-113" id="9nP-Gy-fzI"/>
+                            <constraint firstItem="FgM-Gz-Hwk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="ADL-7B-eQR"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUJ-Mz-BFp"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="37" id="JMP-xP-ptt"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="top" secondItem="pK9-Zf-6c9" secondAttribute="bottom" constant="-108" id="P9h-MN-NfT"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="top" secondItem="MfT-hK-9Q3" secondAttribute="bottom" constant="-108" id="T9R-6O-cVG"/>
+                            <constraint firstItem="3Gz-5j-da7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="YbY-hj-GIj"/>
                             <constraint firstItem="euO-Oe-66u" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="-105" id="Zvp-1h-S22"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dP8-Y9-LE2"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="esp-VP-UG2"/>
@@ -188,13 +217,18 @@
                             <constraint firstItem="euO-Oe-66u" firstAttribute="leading" secondItem="SoN-eS-MOj" secondAttribute="trailing" constant="-107" id="hQo-x9-C3f"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="8" id="haX-Jf-3t5"/>
                             <constraint firstItem="nnA-EV-ttx" firstAttribute="leading" secondItem="SoN-eS-MOj" secondAttribute="trailing" constant="-234" id="hm5-Ip-Iab"/>
+                            <constraint firstItem="zGW-l3-frD" firstAttribute="top" secondItem="MfT-hK-9Q3" secondAttribute="bottom" constant="18" id="i4y-qH-gg8"/>
+                            <constraint firstItem="FgM-Gz-Hwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jFk-Nr-zQG"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="122" id="kiu-k1-Z4p"/>
+                            <constraint firstItem="zGW-l3-frD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWK-nb-kMP"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pZm-4n-dFF"/>
                             <constraint firstItem="9BR-DU-jlI" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="-237" id="pyf-FV-1KU"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="leading" secondItem="9BR-DU-jlI" secondAttribute="trailing" constant="-113" id="qEi-8q-A3p"/>
                             <constraint firstItem="vnr-m6-zUj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sy5-qq-CdH"/>
+                            <constraint firstItem="csY-jw-CuY" firstAttribute="top" secondItem="pK9-Zf-6c9" secondAttribute="bottom" constant="21" id="tzL-EE-f7C"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="vd9-ep-5jO"/>
                             <constraint firstItem="jbO-kz-1Ei" firstAttribute="top" secondItem="SoN-eS-MOj" secondAttribute="bottom" constant="-105" id="wYv-ag-H40"/>
+                            <constraint firstItem="3Gz-5j-da7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xdh-kw-TwR"/>
                             <constraint firstItem="SoN-eS-MOj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzq-cy-4EJ"/>
                         </constraints>
                         <variation key="default">
@@ -218,6 +252,8 @@
                         <outlet property="playerOneScore" destination="dXp-FF-gDG" id="qd2-bo-pcQ"/>
                         <outlet property="playerTwoScore" destination="cvM-SU-WxF" id="2ku-EE-8wi"/>
                         <outlet property="restartGameButton" destination="vnr-m6-zUj" id="nN4-Xk-tdb"/>
+                        <outlet property="winnerLabel" destination="zGW-l3-frD" id="qnf-Dh-HuT"/>
+                        <outlet property="winnerPic" destination="csY-jw-CuY" id="9AX-O6-eZU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -227,6 +263,7 @@
     </scenes>
     <resources>
         <image name="board.png" width="744" height="783"/>
+        <image name="khaled.png" width="583" height="594"/>
         <image name="play-again-button-md.png" width="299" height="213"/>
     </resources>
 </document>

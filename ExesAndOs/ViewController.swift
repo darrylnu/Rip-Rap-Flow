@@ -18,9 +18,13 @@ class ViewController: UIViewController {
     
     var gameActive = true
     
+    var numberOfMovesMade = 0
+    
+    @IBOutlet var winnerLabel: UILabel!
     
     @IBOutlet var playerOneScore: UILabel!
     
+    @IBOutlet var winnerPic: UIImageView!
     
     @IBOutlet var playerTwoScore: UILabel!
     
@@ -33,13 +37,16 @@ class ViewController: UIViewController {
     @IBOutlet var gamePiece: UIButton!
     
     
+    
+    
     @IBAction func placePiece(sender: AnyObject) {
         
         if currentPlayer == 1 && gameState[sender.tag] == 0 && gameActive {
-        
+            
             sender.setImage(UIImage(named:"drake.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
             currentPlayer = 2
+            numberOfMovesMade++
             gameOverCheck()
             
         } else if currentPlayer == 2 && gameState[sender.tag] == 0 && gameActive {
@@ -47,8 +54,9 @@ class ViewController: UIViewController {
             sender.setImage(UIImage(named:"meek.png"), forState: .Normal)
             gameState[sender.tag] = currentPlayer
             currentPlayer = 1
+            numberOfMovesMade++
             gameOverCheck()
-
+            
         }
         print(gameState)
     }
@@ -65,16 +73,29 @@ class ViewController: UIViewController {
                 if currentPlayer-1 == 1 {
                     player1Score++
                     playerOneScore.text = String(player1Score)
-                    
-                    print("crosses win")
+                    print("player 1 win")
+                    playerWin("Player 1")
                 } else {
                     player2Score++
                     playerTwoScore.text = String(player2Score)
-                    print("noughts win")
+                    print("player 2 win")
+                    playerWin("Player 2")
                 }
                 
                 
             }
+        }
+        
+        if gameActive && numberOfMovesMade == 9{
+            
+            print("game is a tie")
+            
+            restartGameButton.hidden = false
+            
+            gameActive = false
+            
+            
+            
         }
     }
     
@@ -95,28 +116,55 @@ class ViewController: UIViewController {
         
         currentPlayer = 1
         
+        numberOfMovesMade = 0
+        
         restartGameButton.hidden = true
         
+        winnerLabel.hidden = true
+        winnerLabel.center = CGPointMake(winnerLabel.center.x + 500, winnerLabel.center.y)
+        
+        winnerPic.hidden = true
+        winnerPic.center = CGPointMake(winnerPic.center.x, winnerPic.center.y + 500)
         
         
         
         
         
     }
+    
+    func playerWin (sender: String) {
+        winnerLabel.hidden = false
+        winnerPic.hidden = false
+        
+        winnerLabel.text = "\(sender) wins!  "
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.winnerLabel.center = CGPointMake(self.winnerLabel.center.x - 500, self.winnerLabel.center.y)
+            
+            self.winnerPic.center = CGPointMake(self.winnerPic.center.x, self.winnerPic.center.y-500)
+        })
 
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         restartGameButton.hidden = true
         
+        winnerLabel.hidden = true
+        winnerLabel.center = CGPointMake(winnerLabel.center.x + 500, winnerLabel.center.y)
+        
+        winnerPic.hidden = true
+        winnerPic.center = CGPointMake(winnerPic.center.x, winnerPic.center.y + 500)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
