@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     var gameActive = true
     
+    
     @IBOutlet var restartGameButton: UIButton!
     
     @IBOutlet var gamePiece: UIButton!
@@ -68,9 +69,22 @@ class ViewController: UIViewController {
         
         print("game restarted")
         
+        gameActive = true
+        
+        var buttonToClear : UIButton
+        
+        for var i = 0; i < 9; i++ {
+            buttonToClear = view.viewWithTag(i) as! UIButton
+            buttonToClear.setImage(nil, forState: .Normal)
+        }
+        
         gameState = [0,0,0,0,0,0,0,0,0]
         
         currentPlayer = 1
+        
+        
+        
+        
         
         
     }
